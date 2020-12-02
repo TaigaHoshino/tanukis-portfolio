@@ -26,10 +26,34 @@
       background-color: rgba(0, 0, 0, 0.3);
     }
 
+    .aboutme{
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+
+    .works h1{
+      margin-bottom: 100px;
+    }
+
+    .works h2{
+      margin-bottom: 30px;
+    }
+
+    .img-thumbnail{
+      border-radius: 200px;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    .aboutme h1{
+      margin-bottom: 100px;
+    }
+
     @media only screen and (max-width: 780px) {
       .title{
         font-size: 30px;
         text-align: center;
+        margin: auto;
       }
     }
   </style>
@@ -57,8 +81,60 @@
     </div>
   </header>
   
-  <div class="container">
-    
+  <div class="container text-center aboutme">
+    <h1>About Me</h1>
+    <img src="img/myIcon.png" class="img-thumbnail" alt="サムネイル画像" width="200px" height="200px">
+    <p>ニックネーム：たぬきす<br>
+       生年月日：1997年6月1日<br>
+       好きな食べ物：親子丼<br>
+       趣味：ウォーキング<br>
+       座右の銘：大悪起これば大善来る
+       </p>
+  </div>
+
+  <div class="container works">
+    <h1 class="text-center">Works</h1>
+    <h2 class="text-center">モバイルアプリ(Android)</h2>
+    <div class="row no-gutters">
+      <div class="col-sm-4">
+        <div class="card" style="max-width: 25rem;">
+          <img class="card-img-top" src="img/2DCarRunner_title.png" alt="2Dカーランナーの画像">
+          <div class="card-body">
+            <h4 class="card-title">2Dカーランナー</h4>
+            <h5 class="card-subtitle">横スクロールカーゲーム</h5>
+            <p class="card-text">シンプル！爽快！横スクロールカーゲーム<br>
+            アクセルボタン、ブレーキボタン、スマホを傾ける操作のみでクルマをコントロール</p>
+            <a href="https://play.google.com/store/apps/details?id=com.tanukisDev.carRunner" target="_blank" class="btn btn-primary">ダウンロード</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="max-width: 25rem;">
+          <img class="card-img-top" src="img/AssultRun_title.png" alt="アサルトランの画像">
+          <div class="card-body">
+            <h4 class="card-title">アサルトラン</h4>
+            <h5 class="card-subtitle">横スクロールシューティングゲーム</h5>
+            <p class="card-text">敵を倒して駆け抜けろ！</p>
+            <a href="https://play.google.com/store/apps/details?id=com.tanukisDev.assultRun" target="_blank" class="btn btn-primary">ダウンロード</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="max-width: 25rem;">
+          <img class="card-img-top" src="img/learningPrefectureApp_title.jpg" alt="都道府県学習アプリの画像">
+          <div class="card-body">
+            <h4 class="card-title">都道府県学習アプリ</h4>
+            <p class="card-text">一問一答形式で都道府県を県庁所在地とセットで覚えよう。<br>
+            教材として自由にお使いください。</p>
+            <a href="https://play.google.com/store/apps/details?id=com.release.learningprefecturesapp" target="_blank" class="btn btn-primary">ダウンロード</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </body>
 </html>

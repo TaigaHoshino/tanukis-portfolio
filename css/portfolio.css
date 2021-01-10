@@ -1,0 +1,115 @@
+.top-back{
+  display: flex;
+  background-image: url(../img/portfolio_top.jpg);
+  background-size: cover;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
+}
+
+header div{
+  padding: 120px;
+  margin:10px;
+}
+
+.title{
+  display: flex;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;   
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.title-text{
+  color: white;
+  font-size: 70px;
+}
+
+.aboutme{
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.works{
+  margin :0;
+  width: 100%;
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.works h2{
+  margin-bottom: 30px;
+}
+
+.works-heading-box{
+  width: 50%;
+}
+
+.works-heading-box h1{
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.works-heading-box img{
+  width:300px;
+  display:block;
+  margin: auto;
+
+}
+
+.fixed-work{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+}
+
+.img-thumbnail{
+  border-radius: 200px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.aboutme h1{
+  margin-bottom: 100px;
+}
+
+.card{
+  margin: auto;
+  margin-bottom: 30px;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+.contact{
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e0f5;
+}
+
+.contact-inner{
+  text-align: center;
+}
+
+@media only screen and (max-width: 780px) {
+
+  
+  .title-text{
+    font-size: 30px;
+    margin: auto;
+  }
+
+  .works{
+    display: block;
+  }
+
+  .works-heading-box{
+    margin: auto;
+  }
+
+  .works-heading-box img{
+    display: none;
+  }
+}

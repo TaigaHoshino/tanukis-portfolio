@@ -7,8 +7,12 @@
   <title>tanukis's portfolio</title>
   <style>
     .top-back{
+      display: flex;
       background-image: url(./img/portfolio_top.jpg);
       background-size: cover;
+      height: 800px;
+      justify-content: center;
+      align-items: center;
     }
 
     header div{
@@ -17,13 +21,18 @@
     }
 
     .title{
+      display: flex;
+      width: 50%;
+      height: 50%;
       justify-content: center;
-      padding:60px;
-      margin: auto;
+      align-items: center;
+      margin: auto;   
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .title-text{
       color: white;
       font-size: 70px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.3);
     }
 
     .aboutme{
@@ -31,12 +40,36 @@
       margin-bottom: 150px;
     }
 
-    .works h1{
-      margin-bottom: 100px;
+    .works{
+      margin :0;
+      width: 100%;
+      display: flex;
     }
 
     .works h2{
       margin-bottom: 30px;
+    }
+
+    .works-heading-box{
+      width: 50%;
+    }
+
+    .works-heading-box h1{
+      margin: auto;
+      margin-bottom: 100px;
+    }
+
+    .works-heading-box img{
+      width:300px;
+      display:block;
+      margin: auto;
+
+    }
+
+    .fixed-work{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 100px;
     }
 
     .img-thumbnail{
@@ -49,39 +82,55 @@
       margin-bottom: 100px;
     }
 
+    .card{
+      margin: auto;
+      margin-bottom: 30px;
+      filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    }
+
     @media only screen and (max-width: 780px) {
-      .title{
+
+      
+      .title-text{
         font-size: 30px;
-        text-align: center;
         margin: auto;
+      }
+
+      .works{
+        display: block;
+      }
+
+      .works-heading-box{
+        margin: auto;
+      }
+
+      .works-heading-box img{
+        display: none;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
+  <section class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
 
     <a class="navbar-brand" href="#">taukis's portfolio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#" aria-controls="#" aria-expanded="false" aria-label="#">
       <span class=""></span>
     </button>
 
-  </div>
+  </section>
   <script src="js/jquery-3.5.1.slim.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 
-  <!-- <img src="img/portfolio_top.jpg" class="img-fluid" alt="ポートフォリオトップ画像"> -->
   <header class="top-back">
     
-    <div class="container">
-        <div class="title col-sm-7">
-          tanukis's<br>portfolio
+        <div class="title">
+          <h1 class="title-text">tanukis's<br>portfolio</h1>
         </div>
-    </div>
   </header>
   
-  <div class="container text-center aboutme">
+  <section class="container text-center aboutme">
     <h1>About Me</h1>
     <img src="img/myIcon.png" class="img-thumbnail" alt="サムネイル画像" width="200px" height="200px">
     <p>ニックネーム：たぬきす<br>
@@ -90,51 +139,58 @@
        趣味：ウォーキング<br>
        座右の銘：大悪起これば大善来る
        </p>
-  </div>
+  </section>
 
-  <div class="container works">
-    <h1 class="text-center">Works</h1>
-    <h2 class="text-center">モバイルアプリ(Android)</h2>
-    <div class="row no-gutters">
-      <div class="col-sm-4">
-        <div class="card" style="max-width: 25rem;">
-          <img class="card-img-top" src="img/2DCarRunner_title.png" alt="2Dカーランナーの画像">
-          <div class="card-body">
-            <h4 class="card-title">2Dカーランナー</h4>
-            <h5 class="card-subtitle">横スクロールカーゲーム</h5>
-            <p class="card-text">シンプル！爽快！横スクロールカーゲーム<br>
-            アクセルボタン、ブレーキボタン、スマホを傾ける操作のみでクルマをコントロール</p>
-            <a href="https://play.google.com/store/apps/details?id=com.tanukisDev.carRunner" target="_blank" class="btn btn-primary">ダウンロード</a>
+  <section class="works">
+        <section class="works-heading-box">
+          <div class="fixed-work">
+            <h1 class="text-center">Works</h1>
+            <img class="img-thumbnail" src="img/programming.png" alt="作品の画像">
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="col-sm-4">
-        <div class="card" style="max-width: 25rem;">
-          <img class="card-img-top" src="img/AssultRun_title.png" alt="アサルトランの画像">
-          <div class="card-body">
-            <h4 class="card-title">アサルトラン</h4>
-            <h5 class="card-subtitle">横スクロールシューティングゲーム</h5>
-            <p class="card-text">敵を倒して駆け抜けろ！</p>
-            <a href="https://play.google.com/store/apps/details?id=com.tanukisDev.assultRun" target="_blank" class="btn btn-primary">ダウンロード</a>
+        <section class="cards">
+          
+          <h2 class="text-center">モバイルアプリ(Android)</h2>
+          
+          <div class="card" style="max-width: 25rem;">
+            <img class="card-img-top" src="img/2DCarRunner_title.png" alt="2Dカーランナーの画像">
+            <div class="card-body">
+              <h4 class="card-title">2Dカーランナー</h4>
+              <h5 class="card-subtitle">横スクロールカーゲーム</h5>
+              <p class="card-text">シンプル！爽快！横スクロールカーゲーム<br>
+              アクセルボタン、ブレーキボタン、スマホを傾ける操作のみでクルマをコントロール</p>
+              <a href="https://play.google.com/store/apps/details?id=com.tanukisDev.carRunner" target="_blank" class="btn btn-primary">ダウンロード</a>
+            </div>
           </div>
-        </div>
+  
+            <div class="card" style="max-width: 25rem;">
+              <img class="card-img-top" src="img/AssultRun_title.png" alt="アサルトランの画像">
+              <div class="card-body">
+                <h4 class="card-title">アサルトラン</h4>
+                <h5 class="card-subtitle">横スクロールシューティングゲーム</h5>
+                <p class="card-text">敵を倒して駆け抜けろ！</p>
+                <a href="https://play.google.com/store/apps/details?id=com.tanukisDev.assultRun" target="_blank" class="btn btn-primary">ダウンロード</a>
+              </div>
+  
+            </div>
+  
+            <div class="card" style="max-width: 25rem;">
+              <img class="card-img-top" src="img/learningPrefectureApp_title.jpg" alt="都道府県学習アプリの画像">
+              <div class="card-body">
+                <h4 class="card-title">都道府県学習アプリ</h4>
+                <p class="card-text">一問一答形式で都道府県を県庁所在地とセットで覚えよう。<br>
+                教材として自由にお使いください。</p>
+                <a href="https://play.google.com/store/apps/details?id=com.release.learningprefecturesapp" target="_blank" class="btn btn-primary">ダウンロード</a>
+              </div>
+            </div>
+        </section>
 
-      </div>
-      <div class="col-sm-4">
-        <div class="card" style="max-width: 25rem;">
-          <img class="card-img-top" src="img/learningPrefectureApp_title.jpg" alt="都道府県学習アプリの画像">
-          <div class="card-body">
-            <h4 class="card-title">都道府県学習アプリ</h4>
-            <p class="card-text">一問一答形式で都道府県を県庁所在地とセットで覚えよう。<br>
-            教材として自由にお使いください。</p>
-            <a href="https://play.google.com/store/apps/details?id=com.release.learningprefecturesapp" target="_blank" class="btn btn-primary">ダウンロード</a>
-          </div>
-        </div>
+        <section>
 
-      </div>
-    </div>
+        </section>
 
-  </div>
+  </section>
+
 </body>
 </html>

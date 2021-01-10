@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <title>tanukis's portfolio</title>
   <style>
+
     .top-back{
       display: flex;
       background-image: url(./img/portfolio_top.jpg);
@@ -44,6 +45,7 @@
       margin :0;
       width: 100%;
       display: flex;
+      margin-bottom: 200px;
     }
 
     .works h2{
@@ -86,6 +88,18 @@
       margin: auto;
       margin-bottom: 30px;
       filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    }
+
+    .contact{
+      display: flex;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+      background-color: #e4e0f5;
+    }
+
+    .contact-inner{
+      text-align: center;
     }
 
     @media only screen and (max-width: 780px) {
@@ -186,11 +200,16 @@
             </div>
         </section>
 
-        <section>
+        
+      </section>
+      
+      <section class="contact">
+        <div class="contact-inner">
+          <h1>Contact</h1>
+          <p>お問い合わせ</p>
+          <button class="btn btn-primary">CONTACT</button>
 
-        </section>
-
-  </section>
-
+        </div>
+      </section>
 </body>
 </html>
